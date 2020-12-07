@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+a:hover{
+  transform:scale(1.2);
+  padding: 5px 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  float:left;
+}
+
+
+.bottom-nav{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 150px;
+
+}
+#element-align {
+    position: fixed;
+    bottom: 0;
+    display: block;
+}
+
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+  position:absolute;
+  right:5px;
+  top: 200px;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">
+<!-- Hide from browsers without javascript
+
+window.onload=function()  //executes when the page finishes loading
+{
+  setTimeout(func1, 2000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+  setTimeout(func2, 4000);
+};
+function func1()
+{
+  document.getElementById("my_div").className="show";
+}
+function func2()
+{
+  document.getElementById("my_div2").className="show";
+}
+
+// End hiding -->
+</script>
+
+</head>
+<body style="font-family:Verdana;">
+
+<div style="padding:15px;">
+  <a href="homepage.html"><img src="assets/logo.png" width="200" height="100"></a>
+</div>
+
+<p style="text-align: center; font-weight: bold;"> Mental Health Status</p> 
+
+<div style="overflow:auto">
+     <div style="padding-top: 10px">
+        <div class="yellow-orange-smiley" style="text-align: center">
+          <img src="assets/neutral/yellow-orange-smiley.png" width="150" height="150">
+          <p> Neutral </p>
+        </div>
+     </div>
+</div>
+
+
+<div class="container" >
+    <div id="my_div" class="hide" style="padding-top: 220px;"> 
+        <img src="assets/neutral/text1.png" width="200" height="100"> 
+      </div>
+
+    <div id="my_div2" class="hide" style="padding-top: 320px"> 
+        <img src="assets/neutral/text2.png" width="270" height="120"> 
+    </div>
+
+<div class="bottom-nav">
+  <div id="element-align">
+    <a href="light-activity-clickme.html">
+    <img src="assets/neutral/light-activities.png" width="100" height="75"></a>
+    <a href="surprise-me-clickme.html"><img src="assets/surprise-me.png" width="100" height="70"></a>
+</div>
+</div>
+
+
+</body>
+</html>

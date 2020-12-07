@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+
+.button {
+  background-color: #8CCDEC; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.button2{
+  color: blue;
+  padding-top: 10px;
+  text-align: center;
+  border: none;
+  background-color: white;
+  display: block;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#image-result-div{
+  padding-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+#text-center{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+  position:absolute;
+  color: blue;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  left: 150px;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">
+
+window.onload=function()  //executes when the page finishes loading
+{
+  setTimeout(func1, 100); 
+};
+function func1(){
+
+var num = Math.floor(Math.random() * 3);
+var randomImage = new Array();
+randomImage[0] = "assets/neutral/reading.png";
+randomImage[1] = "assets/neutral/watching-movie.png";
+randomImage[2] = "assets/neutral/piano.png";
+
+var text = new Array();
+text[0] = "read your favorite magazine or comic book";
+text[1] = "watch a movie with friends";
+text[2] = "play an instrument";
+
+document.getElementById("image-result").src = randomImage[num];
+document.getElementById("image-result").className="show";
+document.getElementById("text-center").innerHTML = text[num];
+}
+
+function func2(){
+func1();  
+}
+</script>
+
+</head>
+<body style="font-family:Verdana;">
+
+
+<div style="padding:15px;">
+  <a href="homepage.html"><img src="assets/logo.png" width="200" height="100"></a>
+</div>
+<p style="padding: 30px; text-align: center;"> Click the button to see a random light activity you may want to try.</p> 
+<button class="button"> Click Me!</button>
+<div id="image-result-div">
+  <img src="assets/placeholder.png" id="image-result" width="200" height="150" class="hide">
+</div>
+<div style="padding-top: 150px">
+  <p id="text-center">
+  </p>
+</div>
+<div style="padding-left: 200px">
+  <button class="button2" onclick="func2()">Try again?</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+
+.button {
+  background-color: #8CCDEC; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.button2{
+  color: blue;
+  padding-top: 10px;
+  text-align: center;
+  border: none;
+  background-color: white;
+  display: block;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#image-result-div{
+  padding-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+#text-center{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+  position:absolute;
+  color: blue;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  left: 150px;
+}
+
+</style>
+
+<script type="text/javascript" language="javascript">
+
+window.onload=function()  //executes when the page finishes loading
+{
+  setTimeout(func1, 100); 
+};
+function func1(){
+
+var num = Math.floor(Math.random() * 4);
+var randomImage = new Array();
+randomImage[0] = "assets/happy/fishing.png";
+randomImage[1] = "assets/happy/soccer2.png";
+randomImage[2] = "assets/happy/mountain-climbing2.png";
+randomImage[3] = "assets/happy/golfing.png";
+
+var text = new Array();
+text[0] = "fishing";
+text[1] = "soccer";
+text[2] = "mountain climbing";
+text[3] = "golfing";
+
+document.getElementById("image-result").src = randomImage[num];
+document.getElementById("image-result").className="show";
+document.getElementById("text-center").innerHTML = text[num];
+}
+
+function func2(){
+func1();  
+}
+</script>
+
+</head>
+<body style="font-family:Verdana;">
+
+<div style="padding:15px;">
+  <a href="homepage.html"><img src="assets/logo.png" width="200" height="100"></a>
+</div>
+<p style="padding: 30px; text-align: center;"> Click the button to see a random outdoor activity you may want to try.</p> 
+<button class="button"> Click Me!</button>
+<div id="image-result-div">
+  <img src="assets/placeholder.png" id="image-result" width="200" height="150" class="hide">
+</div>
+<div style="padding-top: 150px">
+  <p id="text-center"></p>
+</div>
+<div style="padding-left: 200px">
+  <button class="button2" onclick="func2()">Try again?</button>
+</div>
+
+
+</body>
+</html>
